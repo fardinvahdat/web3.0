@@ -1,0 +1,49 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Users\AVA\AppData\Local\node\corepack\yarn\1.22.19\bin\yarn.js add --dev hardhat @nomiclabs/hardhat-ethers@npm:hardhat-deploy-ethers ethers
+
+PATH: 
+  C:\Users\AVA\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\AVA\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Windows\System32\OpenSSH;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Microsoft VS Code\bin;C:\ProgramData\chocolatey\bin;C:\Program Files\Git\cmd;C:\Users\AVA\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Users\AVA\AppData\Local\Microsoft\WindowsApps;C:\Users\AVA\AppData\Roaming\npm;C:\Users\AVA\AppData\Local\GitHubDesktop\bin;C:\Users\AVA\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl;C:\Users\AVA\.foundry\bin
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  16.20.2
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: EPERM: operation not permitted, unlink 'E:\Projects\solidity\web3.0\smart_contract\node_modules\@nomicfoundation\solidity-analyzer-win32-x64-msvc\solidity-analyzer.win32-x64-msvc.node'
+
+npm manifest: 
+  {
+    "name": "smart_contract",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+      "@nomicfoundation/hardhat-toolbox": "^3.0.0",
+      "@nomiclabs/hardhat-ethers": "^2.2.3",
+      "@nomiclabs/hardhat-waffle": "^2.0.6",
+      "chai": "^4.3.8",
+      "ethereum-waffle": "^4.0.10",
+      "ethers": "^5.7.2",
+      "hardhat": "^2.17.3"
+    },
+    "dependencies": {
+      "dotenv": "^16.3.1"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
