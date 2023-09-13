@@ -19,13 +19,26 @@ const Input = ({ placeholder, name, type, value, handleChange }) => (
     className="my-2 w-full rounded-sm p-2 outline-none bg-transparent text-white border-none text-sm white-glassmorphism"
   />
 );
-const Welcome = () => {
-  const { value } = useContext(TransactionsContext);
-  console.log(value);
 
-  const collectWallet = () => {};
-  const handleSubmit = (e) => {};
-  const handleChange = (e) => {};
+const Welcome = () => {
+  const {
+    connectWallet,
+    currentAccount,
+    formData,
+    handleChange,
+    sendTransaction,
+  } = useContext(TransactionsContext);
+
+  const handleSubmit = (e) => {
+    const { addressTo, amount, keyword, message } = formData;
+    e.preventDefault();
+
+
+    if (!addressTo || !amount || !keyword || !message) return;
+
+    sendTransaction();
+  };
+
   const isLoading = false;
 
   return (
@@ -40,13 +53,17 @@ const Welcome = () => {
             Explore the crypto world. buy and sell cryptocurrencies easily on
             Krypto
           </p>
-          <button
-            type="button"
-            onClick={collectWallet}
-            className="flex flex-row justify-center items-center my-5 bg-[#2975e3] p-3 cursor-pointer rounded-full hover:bg-[#2546bd]"
-          >
-            <p className="text-white text-base font-semibold">Connect Wallet</p>
-          </button>
+          {!currentAccount && (
+            <button
+              type="button"
+              onClick={connectWallet}
+              className="flex flex-row justify-center items-center my-5 bg-[#2975e3] p-3 cursor-pointer rounded-full hover:bg-[#2546bd]"
+            >
+              <p className="text-white text-base font-semibold">
+                Connect Wallet
+              </p>
+            </button>
+          )}
           <div className="grid sm:grid-cols-3 grid-cols-2 mt-10 w-full">
             <div className={`rounded-tl-2xl ${companyCommonStyles}`}>
               Reliability
